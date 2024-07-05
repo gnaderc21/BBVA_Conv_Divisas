@@ -98,8 +98,8 @@
             event.preventDefault();
 
             const monto = document.getElementById('monto').value;
-            const monedaOrigen = document.getElementById('monedaOrigen').value.toUpperCase();
-            const monedaDestino = document.getElementById('monedaDestino').value.toUpperCase();
+            const monedaOrigen = document.getElementById('monedaOrigen').value.toUpperCase(); //Control de moneda, si digita minúscula o mayúscula siempre se validará en mayúscula
+            const monedaDestino = document.getElementById('monedaDestino').value.toUpperCase(); //Control de moneda, si digita minúscula o mayúscula siempre se validará en mayúscula
 
             const url = `http://localhost:8080/convert?monto=${monto}&monedaOrigen=${monedaOrigen}&monedaDestino=${monedaDestino}`;
 
@@ -115,7 +115,7 @@
                     ${data}`
             })
             .catch(error => {
-                document.getElementById('result').textContent = `Error: ${error.message}`;
+                document.getElementById('result').textContent = `Error controlado: Detalle: [${error.message}]`;
             });
         });
     </script>

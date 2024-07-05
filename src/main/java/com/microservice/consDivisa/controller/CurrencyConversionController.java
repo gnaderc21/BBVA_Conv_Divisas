@@ -20,7 +20,7 @@ import java.util.Set;
 public class CurrencyConversionController {
 
     private static final String EXCHANGE_RATE_API_URL = "http://api.exchangeratesapi.io/v1/latest?access_key=10124780aa73c83cd1e5b667cf8af774";
-    //Se queman los datos de la moneda para controlar que digite una diferente a las permitidas en la codificación ISO 4217.
+    //No es buena práctica, pero para la prueba se queman los datos de la moneda para controlar que digite una diferente a las permitidas en la codificación ISO 4217.
     private static final Set<String> MONEDAS_PERMITIDAS = new HashSet<>(Set.of( "AED",    "AFN",    "ALL",    "AMD",    "ANG",    "AOA",    "ARS",    "AUD",    "AWG",    "AZM",
                                                                                 "BAM",    "BBD",    "BDT",    "BGN",    "BHD",    "BIF",    "BMD",    "BND",    "BOB",    "BRL",
                                                                                 "BSD",    "BTN",    "BWP",    "BYR",    "BZD",    "CAD",    "CDF",    "CHF",    "CLP",    "CNY",
